@@ -5,7 +5,7 @@ This project showcases the relying party.
 ## Requirements:
 
 - [python](https://www.python.org/downloads/) 3.x or higher
-- [openjdk](https://openjdk.java.net/) 11
+- [openjdk](https://openjdk.java.net/) 21
 
 ## How to run
 

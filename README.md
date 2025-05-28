@@ -3,7 +3,7 @@
 [![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
 [![Join the #spid openid](https://img.shields.io/badge/Slack%20channel-%23spid%20openid-blue.svg)](https://developersitalia.slack.com/archives/C7E85ED1N/)
 ![Apache license](https://img.shields.io/badge/license-Apache%202-blue.svg)
-[![java: 11](https://oss.aoapps.com/ao-badges/java-11.svg)](https://docs.oracle.com/en/java/javase/11/docs/api/)
+[![java: 21](https://oss.aoapps.com/ao-badges/java-21.svg)](https://docs.oracle.com/en/java/javase/21/docs/api/)
 [![CodeQL](https://github.com/italia/spid-cie-oidc-java/actions/workflows/codeql.yml/badge.svg)](https://github.com/italia/spid-cie-oidc-java/actions/workflows/codeql.yml)
 [![codecov](https://codecov.io/gh/italia/spid-cie-oidc-java/branch/main/graph/badge.svg?token=FjYaMfpxkK)](https://codecov.io/gh/italia/spid-cie-oidc-java)
 
@@ -37,7 +37,7 @@ The purpose of this project is to provide a simple and immediate tool to integra
 
 It contains a _[starter-kit](starter-kit)_, a java library that exposes utilities, _helpers_ and _handlers_ you can include into your application in order to support the SPID/CIE OpenID Connect Authentication profile and OpenID Federation 1.0.
 
-The library is developed using **Java 11** with a "Low Level Java" approach to limit dependencies and allowing it to be included into projects mades with high-level framework like Spring, SpringBoot, OSGi, Quarkus and many others java based frameworks.
+The library is developed using **Java 21** with a "Low Level Java" approach to limit dependencies and allowing it to be included into projects mades with high-level framework like Spring, SpringBoot, OSGi, Quarkus and many others java based frameworks.
 
 Actually only "**OpenID Connect Relying Party**" _role_ is managed. The starter-kit provides:
 

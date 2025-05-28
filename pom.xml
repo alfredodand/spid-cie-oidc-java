@@ -8,7 +8,7 @@
 	<version>1.0.3-SNAPSHOT</version>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>21</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
