@@ -3,7 +3,7 @@ package it.spid.cie.oidc.schemas;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.jcip.annotations.Immutable;
+import com.nimbusds.jose.shaded.jcip.Immutable;
 
 @Immutable
 public final class SPIDClaimItem extends ClaimItem {

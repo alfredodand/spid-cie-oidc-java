@@ -4,8 +4,6 @@ import java.time.LocalDateTime;
 
 import org.json.JSONObject;
 
-import it.spid.cie.oidc.exception.OIDCException;
-
 public class TrustChain extends BaseModel {
 
 	private boolean active;

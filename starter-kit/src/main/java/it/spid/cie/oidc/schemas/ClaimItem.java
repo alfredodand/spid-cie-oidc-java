@@ -3,8 +3,9 @@ package it.spid.cie.oidc.schemas;
 import java.io.Serializable;
 import java.util.Map;
 
+import com.nimbusds.jose.shaded.jcip.Immutable;
+
 import it.spid.cie.oidc.util.Validator;
-import net.jcip.annotations.Immutable;
 
 @Immutable
 public abstract class ClaimItem implements Serializable {

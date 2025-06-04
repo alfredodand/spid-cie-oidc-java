@@ -1,22 +1,27 @@
 package it.spid.cie.oidc.handler;
 
-import com.nimbusds.jose.JWEAlgorithm;
-import com.nimbusds.jose.JWSAlgorithm;
-import com.nimbusds.jose.jwk.JWK;
-import com.nimbusds.jose.jwk.JWKSet;
-import com.nimbusds.jose.jwk.KeyUse;
-import com.nimbusds.jose.jwk.RSAKey;
-
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.nimbusds.jose.JWEAlgorithm;
+import com.nimbusds.jose.JWSAlgorithm;
+import com.nimbusds.jose.jwk.JWKSet;
+import com.nimbusds.jose.jwk.KeyUse;
+import com.nimbusds.jose.jwk.RSAKey;
 
 import it.spid.cie.oidc.callback.RelyingPartyLogoutCallback;
 import it.spid.cie.oidc.config.GlobalOptions;

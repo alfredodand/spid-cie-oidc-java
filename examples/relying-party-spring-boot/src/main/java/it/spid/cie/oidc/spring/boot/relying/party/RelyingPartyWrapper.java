@@ -4,8 +4,6 @@ import java.io.File;
 import java.nio.file.Files;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,6 +20,7 @@ import it.spid.cie.oidc.schemas.WellKnownData;
 import it.spid.cie.oidc.spring.boot.relying.party.config.OidcConfig;
 import it.spid.cie.oidc.spring.boot.relying.party.persistence.H2PersistenceImpl;
 import it.spid.cie.oidc.util.Validator;
+import jakarta.annotation.PostConstruct;
 
 @Component
 public class RelyingPartyWrapper {

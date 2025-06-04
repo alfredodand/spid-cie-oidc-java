@@ -1,6 +1,6 @@
 package it.spid.cie.oidc.schemas;
 
-import net.jcip.annotations.Immutable;
+import com.nimbusds.jose.shaded.jcip.Immutable;
 
 /**
  * Each Federation Entity expose its information via the ".well-known/openid-federation"

@@ -2,17 +2,15 @@ package it.spid.cie.oidc.spring.boot.relying.party.persistence.model;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import com.nimbusds.jose.jwk.KeyUse;
 import it.spid.cie.oidc.model.FederationEntity;
 import it.spid.cie.oidc.util.GetterUtil;
 import it.spid.cie.oidc.util.Validator;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "federation_entity_configuration")

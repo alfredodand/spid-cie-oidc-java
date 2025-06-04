@@ -1,8 +1,5 @@
 package it.spid.cie.oidc.spring.boot.relying.party.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +15,8 @@ import it.spid.cie.oidc.config.OIDCConstants;
 import it.spid.cie.oidc.schemas.WellKnownData;
 import it.spid.cie.oidc.spring.boot.relying.party.RelyingPartyWrapper;
 import it.spid.cie.oidc.spring.boot.relying.party.config.OidcConfig;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/oidc/rp")

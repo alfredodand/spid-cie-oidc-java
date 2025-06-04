@@ -3,9 +3,6 @@ package it.spid.cie.oidc.spring.boot.relying.party.controller;
 import java.net.URI;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +21,8 @@ import it.spid.cie.oidc.model.AuthnToken;
 import it.spid.cie.oidc.spring.boot.relying.party.RelyingPartyWrapper;
 import it.spid.cie.oidc.util.GetterUtil;
 import it.spid.cie.oidc.util.Validator;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/oidc/rp")
