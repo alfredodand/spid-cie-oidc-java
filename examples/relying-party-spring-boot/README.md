@@ -32,19 +32,19 @@ cd examples/relying-party-spring-boot
 ../../mvnw clean spring-boot:run
 ```
 
-this will start the relying party server on [http://127.0.0.1:8080](http://127.0.0.1:8080), keep it running
+this will start the relying party server on [http://127.0.0.1:5000](http://127.0.0.1:5000), keep it running
 
 
 
 Do the on-boarding process
 - generate the relying party jwks
-  - go [here](http://127.0.0.1:8080/) to auto-generate it
+  - go [here](http://127.0.0.1:5000/) to auto-generate it
   - federation jwks and core jwks are exposed on the page and inside application log
   - create the file `${user.home}/oidc-rp-jwk.json` with the federation jwks
   - create the file `${user.home}/oidc-rp-core-jwk.json` with the core jwks
   - - use "reload" link to proceed with next step
 - show on-boarding datas
-  - go [here](http://127.0.0.1:8080/) to see it
+  - go [here](http://127.0.0.1:5000/) to see it
 - register the relying party [here](http://127.0.0.1:8000/admin/spid_cie_oidc_authority/federationdescendant/add)
   - set "name", "sub" and "jwks" with values shown in previous step
   - set isActive to true
@@ -56,12 +56,12 @@ Do the on-boarding process
   - copy trust_marks and save as `${user.home}/oidc-rp-trust-marks.json`
   - trust_marks are exposed as JSONObject you have to store it as JSONArray (put `[` `]` around it)
 - complete relying party on-boarding
-  - go [here](http://127.0.0.1:8080/)
+  - go [here](http://127.0.0.1:5000/)
   - user "reload" link to acquire trust marks
-  - go [here](http://127.0.0.1:8080/oidc/rp/.well-known/openid-federation?format=json) and verify trust_marks are exposed
+  - go [here](http://127.0.0.1:5000/oidc/rp/.well-known/openid-federation?format=json) and verify trust_marks are exposed
 
 
-Visit [http://127.0.0.1:8080/oidc/rp/landing](http://127.0.0.1:8080/oidc/rp/landing) to try out the application
+Visit [http://127.0.0.1:5000/oidc/rp/landing](http://127.0.0.1:5000/oidc/rp/landing) to try out the application
 
 
 ## Docker
@@ -74,7 +74,7 @@ With docker we cannot use "127.0.0.1". Before proceed add this line to your `hos
 
 A docker image containing this example can be built a run:
 - `docker-compose up`
-- visit `http://relying-party.org:8080/`
+- visit `http://relying-party.org:5000/`
 
 Some hints:
 - we are using [federation](https://github.com/italia/spid-cie-oidc-django) v1.4.0

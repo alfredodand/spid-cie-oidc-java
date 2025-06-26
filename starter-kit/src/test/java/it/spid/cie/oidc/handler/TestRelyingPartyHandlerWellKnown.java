@@ -22,7 +22,7 @@ public class TestRelyingPartyHandlerWellKnown {
 
 	private static String TRUST_ANCHOR = "http://127.0.0.1:18000/";
 	private static String SPID_PROVIDER = "http://127.0.0.1:18000/oidc/op/";
-	private static String RELYING_PARTY = "http://127.0.0.1:18080/oidc/rp/";
+	private static String RELYING_PARTY = "http://127.0.0.1:15000/oidc/rp/";
 
 	@Test
 	public void testClass1() {

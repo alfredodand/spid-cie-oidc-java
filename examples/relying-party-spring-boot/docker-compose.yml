@@ -24,7 +24,7 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile.java-rp
     ports:
-      - "8080:8080"
+      - "5000:5000"
     volumes:
       - ./docker/data-java:/data
     networks:
