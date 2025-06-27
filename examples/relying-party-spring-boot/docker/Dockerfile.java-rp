@@ -4,8 +4,9 @@ FROM eclipse-temurin:21-jdk-alpine
 
 RUN apk update && apk add git
 
-RUN git clone --depth=1 https://github.com/ialfredodand/spid-cie-oidc-java && \
+RUN git clone --depth=1 https://github.com/alfredodand/spid-cie-oidc-java && \
 	cd spid-cie-oidc-java && \
+	chmod +x mvnw && \
 	./mvnw clean install
 
 WORKDIR /spid-cie-oidc-java/examples/relying-party-spring-boot

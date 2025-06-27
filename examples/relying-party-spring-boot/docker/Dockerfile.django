@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 RUN apt update && apt -y install git
 
-RUN git clone --depth=1 --branch v1.4.0 https://github.com/alfredodand/spid-cie-oidc-django && \
+RUN git clone --depth=1 https://github.com/alfredodand/spid-cie-oidc-django && \
 	cd spid-cie-oidc-django && \
 	pip install --upgrade pip && \
 	pip install -e . && \
@@ -12,6 +12,7 @@ RUN git clone --depth=1 --branch v1.4.0 https://github.com/alfredodand/spid-cie-
 COPY docker/django/docker-prepare.sh spid-cie-oidc-django/docker-prepare.sh
 
 RUN cd spid-cie-oidc-django && \
+	mkdir -p /examples-docker && \
 	bash docker-prepare.sh && \
 	cd /examples-docker/federation_authority && \
 	python3 ./manage.py migrate && \

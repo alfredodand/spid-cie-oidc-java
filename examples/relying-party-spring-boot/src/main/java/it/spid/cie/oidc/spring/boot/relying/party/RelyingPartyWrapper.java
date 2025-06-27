@@ -89,6 +89,10 @@ public class RelyingPartyWrapper {
 
 		logger.info("final jwkFed: " + jwkFed);
 		logger.info("final trust_marks: " + trustMarks);
+		System.out.println("final jwkFed: " + jwkFed);
+		System.out.println("final jwkCore: " + jwkCore);
+        System.out.println("final trust_marks: " + trustMarks);
+		
 
 		RelyingPartyOptions options = new RelyingPartyOptions()
 				.setDefaultTrustAnchor(oidcConfig.getDefaultTrustAnchor())
