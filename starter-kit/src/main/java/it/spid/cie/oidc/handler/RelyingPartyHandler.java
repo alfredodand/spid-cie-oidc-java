@@ -534,9 +534,10 @@ public class RelyingPartyHandler {
 			trustAnchor, trustAnchor);
 
 		EntityConfiguration taConf;
+		String jwt = "";
 
 		if (trustAnchorEntity == null || trustAnchorEntity.isExpired() || force) {
-			String jwt = EntityHelper.getEntityConfiguration(trustAnchor);
+			jwt = EntityHelper.getEntityConfiguration(trustAnchor);
 
 			taConf = new EntityConfiguration(jwt, jwtHelper);
 
@@ -567,10 +568,21 @@ public class RelyingPartyHandler {
 			return null;
 		}
 		else {
+
+			System.out.println("Entity Configuration JWT: " + jwt);
+    		System.out.println("Trust Anchor Configuration payload: " + taConf.getPayload());
+            System.out.println("Trust Anchor Configuration is valid: " + taConf.isValid());;
+            
 			TrustChainBuilder tcb =
 				new TrustChainBuilder(subject, metadataType, jwtHelper)
 					.setTrustAnchor(taConf)
 					.start();
+
+			System.out.println("Builder state: " + tcb.toString());
+            System.out.println("Builder valid: " + tcb.isValid());
+            System.out.println("Builder metadata: " + tcb.getFinalMetadata());
+            System.out.println("  Chain: " + tcb.getChain());
+            System.out.println("  Verified Trust Marks: " + tcb.getVerifiedTrustMarksAsString());
 
 			if (!tcb.isValid()) {
 				String msg = String.format(

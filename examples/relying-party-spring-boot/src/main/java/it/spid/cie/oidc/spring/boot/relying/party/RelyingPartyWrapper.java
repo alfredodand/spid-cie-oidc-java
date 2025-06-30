@@ -88,6 +88,7 @@ public class RelyingPartyWrapper {
 			oidcConfig.getRelyingParty().getTrustMarksFilePath());
 
 		logger.info("final jwkFed: " + jwkFed);
+		logger.info("final jwkCore: " + jwkCore);
 		logger.info("final trust_marks: " + trustMarks);
 		System.out.println("final jwkFed: " + jwkFed);
 		System.out.println("final jwkCore: " + jwkCore);

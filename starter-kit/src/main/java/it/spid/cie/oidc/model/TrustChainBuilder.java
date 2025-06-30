@@ -211,6 +211,8 @@ public class TrustChainBuilder {
      * @throws Exception
      */
     protected void applyMetadataPolicy() throws OIDCException {
+        System.out.println("Trust Path before applying policy: " + trustPath);
+        System.out.println("Subject metadata: " + subjectConfiguration.getPayloadMetadata());
         if (trustPath.isEmpty()) {
             trustPath.add(subjectConfiguration);
         } else {
