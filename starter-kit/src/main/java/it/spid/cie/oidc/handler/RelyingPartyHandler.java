@@ -532,7 +532,6 @@ public class RelyingPartyHandler {
 
 		CachedEntityInfo trustAnchorEntity = persistence.fetchEntityInfo(
 			trustAnchor, trustAnchor);
-			logger.info("INFOFOS: " + subject + trustAnchor + metadataType + force);
 
 		EntityConfiguration taConf;
 		String jwt = "";
